@@ -5,8 +5,8 @@ page = requests.get('https://www.truugo.com/edifact/d07a/ordrsp/')
 tree = html.fromstring(page.content)
 
 view_message_El = tree.xpath('//div[@id="view-message"]')
+# unh_El = view_message_El[0].xpath('//a[@href="/edifact/d07a/unh/"]')
 unh_El = view_message_El[0].xpath('//a[@href="/edifact/d07a/unh/"]')
-# view_message_El_String = html.tostring(view_message_El)  # '//*[@id="view-message"]'
 
 # for x in view_message_El:
 #     print(x[0].tag)
